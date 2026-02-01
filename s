@@ -93,7 +93,7 @@ task.spawn(function()
     if queue then
         -- use a loadstring pointing to your script's raw link (github/pastebin)
         -- this is the only way to avoid the infinite nesting loop
-        queue([[loadstring(game:HttpGet("aaaaa"))()]])
+        queue([[loadstring(game:HttpGet("https://raw.githubusercontent.com/blmpsaa/s/refs/heads/main/s"))()]])
     end
 
     print("restarting for fresh pool...")
