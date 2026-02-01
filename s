@@ -41,7 +41,7 @@ local function worker(id)
         if session_count >= restart_threshold then break end
 
         local ok, profile = pcall(function()
-            [cite_start]return fetch_remote:InvokeServer({["goBack"] = false}) [cite: 215, 233]
+            return fetch_remote:InvokeServer({["goBack"] = false})
         end)
 
         if ok and profile and profile.UserId then
@@ -53,8 +53,8 @@ local function worker(id)
                 current_batch = current_batch + 1
                 session_count = session_count + 1
                 
-                [cite_start]local d_name = profile.DisplayName or "n/a" [cite: 386]
-                [cite_start]local u_name = profile.Username or "n/a" [cite: 387]
+                local d_name = profile.DisplayName or "n/a" 
+                local u_name = profile.Username or "n/a" 
                 local age = "n/a"
                 
                 pcall(function()
@@ -71,7 +71,7 @@ local function worker(id)
                 end
             end
         else
-            [cite_start]task.wait(1) [cite: 211]
+            task.wait(1) 
         end
     end
 end
@@ -93,7 +93,7 @@ task.spawn(function()
     if queue then
         -- use a loadstring pointing to your script's raw link (github/pastebin)
         -- this is the only way to avoid the infinite nesting loop
-        queue([[loadstring(game:HttpGet("https://raw.githubusercontent.com/blmpsaa/s/refs/heads/main/s"))()]])
+        queue([[loadstring(game:HttpGet("aaaaa"))()]])
     end
 
     print("restarting for fresh pool...")
